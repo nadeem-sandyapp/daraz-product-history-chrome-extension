@@ -9,8 +9,7 @@
       var url = new URL(tab.url)
       var domain = url.hostname;
       if(domain == "www.daraz.pk"){
-        var base = "https://comparepk.com/public/daraz-tools/get-daraz-product-data?url=";
-        document.getElementById("history").innerHTML = "<a href='"+base+tab.url+"' target='_blank'><button class='mb-5 btn btn-primary'>View this product on our website</button></a>";
+        var base = "https://comparepk.com/public/daraz-tools/get-daraz-product-data-for-chrome-extension?url=";
         chrome.runtime.onMessage.addListener(function(request, sender) {
           loadXMLDoc(base+tab.url);
           // if (request.action == "getSource") {
